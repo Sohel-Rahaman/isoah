@@ -115,7 +115,7 @@ const CountUpAnimated: React.FC<CountUpAnimatedProps> = ({ end, suffix, start })
     if (!start) return; // Do not start counting if not triggered
 
     let startCount = 0;
-    const duration = 2000; // Total duration of the count-up in ms
+    const duration = 5000; // Total duration of the count-up in ms
     const incrementTime = 50; // Interval time in ms
     const step = end / (duration / incrementTime);
 

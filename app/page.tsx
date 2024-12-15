@@ -1,4 +1,5 @@
 import BrandCarousel from './components/BrandCarousel';
+import ContactUs from './components/ContactUs';
 import { Footer } from './components/Footer';
 import Navbar from './components/Navbar';
 import NumbersSection from './components/NumbersSection';
@@ -42,6 +43,7 @@ const HomePage = () => {
   return (
     <main className=" flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
       <Cursor />
+      <ContactUs/>
       <div className="test">
         <Navbar />
         <ParallaxSlider slides={slides} />
