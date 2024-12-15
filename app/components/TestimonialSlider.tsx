@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Image from "next/image";
 
 interface Testimonial {
@@ -42,28 +42,28 @@ const TestimonialSlider: React.FC = () => {
   const autorotateTiming = 3000;
   const autorotateInterval = useRef<NodeJS.Timeout | null>(null);
 
+  // Stop the auto-rotation
+  const stopAutorotate = useCallback(() => {
+    if (autorotateInterval.current) {
+      clearInterval(autorotateInterval.current);
+      autorotateInterval.current = null;
+    }
+  }, []);
+
   // Start the auto-rotation
-  const startAutorotate = () => {
+  const startAutorotate = useCallback(() => {
     stopAutorotate(); // Clear any existing intervals
     autorotateInterval.current = setInterval(() => {
       setActive((prev) => (prev + 1 === testimonialsData.length ? 0 : prev + 1));
       setShowFullQuote(false); // Reset Read More state
     }, autorotateTiming);
-  };
-
-  // Stop the auto-rotation
-  const stopAutorotate = () => {
-    if (autorotateInterval.current) {
-      clearInterval(autorotateInterval.current);
-      autorotateInterval.current = null;
-    }
-  };
+  }, [stopAutorotate]);
 
   // Handle autorotation when hovering
   useEffect(() => {
     if (!isHovered) startAutorotate();
     return () => stopAutorotate();
-  }, [isHovered]);
+  }, [isHovered, startAutorotate, stopAutorotate]);
 
   // Button click handler
   const handleButtonClick = (index: number) => {

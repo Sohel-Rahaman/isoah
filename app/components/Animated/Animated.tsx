@@ -12,9 +12,9 @@ interface AnimatedProps {
   direction?: Direction;
   duration?: number;
   delay?: number;
-  initial?: any;
-  animate?: any;
-  exit?: any;
+  initial?: Variants;
+  animate?: Variants;
+  exit?: Variants;
   className?: string;
 }
 
@@ -60,8 +60,6 @@ const Animated: React.FC<AnimatedProps> = ({
   duration = 0.5,
   delay = 0,
   initial,
-  animate,
-  exit,
   className = "",
 }) => {
   const variants = initial || getVariants(direction);

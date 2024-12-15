@@ -1,4 +1,3 @@
- 
 'use client';
 
 import React from "react";
@@ -17,8 +16,8 @@ interface TimelineEvent {
   type: EventType;
   iconStyle: React.CSSProperties;
   animation?: {
-    initial?: object;
-    whileInView?: object;
+    initial?: Variants["hidden"];
+    whileInView?: Variants["visible"];
     transition?: object;
   };
 }
@@ -44,7 +43,7 @@ const TimelineEventComponent: React.FC<TimelineEventProps> = ({ event }) => {
     visible: { opacity: 1, y: 0 },
   };
 
-  const animationVariants: Variants | { hidden: object; visible: object; } | undefined = event.animation
+  const animationVariants: Variants = event.animation
     ? {
         hidden: event.animation.initial || { opacity: 0, y: 50 },
         visible: event.animation.whileInView || { opacity: 1, y: 0 },

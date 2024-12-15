@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useEffect, useRef } from 'react';
@@ -14,7 +13,7 @@ import {
   NavigationMenuViewport,
 } from "@/components/ui/navigation-menu";
 import Animated from './Animated/Animated';
-
+import Image from "next/image";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -98,7 +97,8 @@ const Navbar = () => {
                 className="flex items-center text-xl font-bold text-white"
                 onClick={closeMenu}
               >
-                <img src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[25px] md:text-[30px] '>ForensicsHQ</div>
+                <Image   width={500}
+  height={500}src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[25px] md:text-[30px] '>ForensicsHQ</div>
               </Link>
             </Animated>
           </div>
@@ -241,7 +241,8 @@ const Navbar = () => {
               className="flex items-center text-xl font-bold text-[#fefefe]"
               onClick={closeMenu}
             >
-                <img src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[20px] md:text-[30px] '>ForensicsHQ</div>
+                <Image   width={500}
+  height={500}src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[20px] md:text-[30px] '>ForensicsHQ</div>
 
             </Link>
             <button

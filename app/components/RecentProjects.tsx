@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { FaLocationArrow } from "react-icons/fa6";
 import { projects } from "@/data";
 import { PinContainer } from "./ui/Pin";
@@ -60,10 +60,11 @@ const RecentProjects = () => {
                       className="relative w-72 h-full overflow-hidden lg:rounded-3xl"
                       style={{ backgroundColor: "#13162D" }}
                     >
-                      <img src="/bg.png" alt="bgimg" />
+                      <Image   width={500}
+  height={500}src="/bg.png" alt="bgimg" />
                     </div>
-                    <img
-                      src={item.img}
+                    <Image   width={500}
+  height={500}src={item.img}
                       alt="cover"
                       className="z-0 absolute bottom-0"
                     />
@@ -93,7 +94,8 @@ const RecentProjects = () => {
                             transform: `translateX(-${5 * idx + 2}px)`,
                           }}
                         >
-                          <img src={icon} alt="icon" className="p-2" />
+                          <Image   width={500}
+  height={500}src={icon} alt="icon" className="p-2" />
                         </div>
                       ))}
                     </div> */}

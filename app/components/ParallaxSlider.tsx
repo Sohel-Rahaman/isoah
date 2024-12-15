@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -9,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/effect-fade';
 import { Spotlight } from './ui/Spotlight';
 import Typewriter from './Typewriter'; // Import the Typewriter component
-
+import Image from "next/image";
 interface ParallaxSliderProps {
     slides: {
         id: number;
@@ -26,10 +25,11 @@ const ParallaxSlider: React.FC<ParallaxSliderProps> = ({ slides }) => {
     // Preload images to prevent white flashes
     useEffect(() => {
         slides.forEach((slide) => {
-            const img = new Image();
+            const img = new window.Image(); // Explicitly use the native Image constructor
             img.src = slide.imageUrl;
         });
     }, [slides]);
+    
 
     // Animation variants for text content
     const textVariants: Variants = {
@@ -76,11 +76,12 @@ const ParallaxSlider: React.FC<ParallaxSliderProps> = ({ slides }) => {
                                 willChange: 'transform',
                             }}
                         >
-                            <img
-                                src={slide.imageUrl}
-                                alt={slide.title}
-                                className="object-cover w-full h-full"
-                            />
+                             <Image
+        src={slide.imageUrl}
+        alt={slide.title}
+        layout="fill" // Ensures it fills the container
+        objectFit="cover" // Ensures the image maintains its aspect ratio
+    />
                         </motion.div>
 
                         {/* Text Content */}

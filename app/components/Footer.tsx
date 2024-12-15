@@ -1,8 +1,7 @@
-/* eslint-disable @next/next/no-img-element */
  
 
 'use client';
-
+import Image from "next/image";
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 // import { FaBriefcase, FaGraduationCap, FaStar } from 'react-icons/fa';
@@ -42,7 +41,8 @@ export const Footer: React.FC = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 1 }}
           >
-            <img src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[25px] md:text-[30px] '>ForensicsHQ</div>
+            <Image   width={500}
+  height={500}src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[25px] md:text-[30px] '>ForensicsHQ</div>
           </motion.div>
 
           {/* Grid Sections */}
