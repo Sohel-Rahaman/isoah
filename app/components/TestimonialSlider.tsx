@@ -127,7 +127,7 @@ const TestimonialSlider: React.FC = () => {
                 }}
               >
                 {active === index && (
-                  <div className="text-2xl font-bold text-white before:content-['\201C'] after:content-['\201D']">
+                  <div className="text-2xl font-bold text-[#ddd] before:content-['\201C'] after:content-['\201D']">
                     {showFullQuote
                       ? testimonial.quote
                       : `${testimonial.quote.slice(0, 110)}...`}
@@ -153,7 +153,7 @@ const TestimonialSlider: React.FC = () => {
               key={index}
               className={`inline-flex justify-center whitespace-nowrap rounded-full px-3 py-1.5 m-1.5 text-xs shadow-sm focus:outline-none focus:ring focus:ring-indigo-300 transition-colors duration-150 ${
                 active === index
-                  ? "bg-indigo-500 text-white shadow-indigo-950/10"
+                  ? "bg-indigo-500 text-[#ddd] shadow-indigo-950/10"
                   : "bg-white hover:bg-indigo-100 text-slate-900"
               }`}
               onClick={() => handleButtonClick(index)}

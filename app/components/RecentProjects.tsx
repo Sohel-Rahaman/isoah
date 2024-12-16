@@ -31,7 +31,7 @@ const RecentProjects = () => {
   };
 
   return (
-    <section className=" text-white overflow-hidden">
+    <section className=" text-[#ddd] overflow-hidden">
       <div className="py-10 max-w-7xl mx-auto px-3">
         <div className="max-w-7xl mx-auto">
           <h1 className="heading text-[30px] font-bold md:text-[38px] text-center mb-0 md:mb-10">
@@ -40,7 +40,7 @@ const RecentProjects = () => {
           <div className="flex flex-wrap items-center justify-around px-4 gap-10 sm:gap-5 md:gap-16 mt-5">
             {projects.map((item, index) => (
               <motion.div
-                className="lg:min-h-[32.5rem] h-[22rem] md:h-[25rem] flex items-center justify-center sm:w-64 md:w-80 w-[100%]"
+                className="lg:min-h-[32.5rem] h-[22rem] md:h-[25rem] backdrop-blur-sm flex items-center justify-center sm:w-64 md:w-80 w-[100%]"
                 key={item.id}
                 custom={getDirection(index)}
                 initial="hidden"
@@ -57,16 +57,16 @@ const RecentProjects = () => {
                 >
                   <div className="relative flex items-center justify-center sm:w-[40vw] md:w-80 overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                     <div
-                      className="relative w-72 h-full overflow-hidden lg:rounded-3xl"
+                      className="relative w-72 h-full overflow-hidden rounded-3xl"
                       style={{ backgroundColor: "#13162D" }}
                     >
-                      <Image   width={500}
-  height={500}src="/bg.png" alt="bgimg" />
+                      <Image width={500}
+                        height={500} src="/bg.png" alt="bgimg" className="rounded-md"/>
                     </div>
-                    <Image   width={500}
-  height={500}src={item.img}
+                    <Image width={500}
+                      height={500} src={item.img}
                       alt="cover"
-                      className="z-0 absolute bottom-0"
+                      className="z-0 absolute rounded-md bottom-0"
                     />
                   </div>
 
@@ -101,7 +101,7 @@ const RecentProjects = () => {
                     </div> */}
 
                     <div className="flex justify-center items-center">
-                      <p className="flex lg:text-xl md:text-xs text-sm text-purple">
+                      <p className="flex lg:text-xl md:text-xs text-sm text-green-400">
                         Check Live Site
                       </p>
                       <FaLocationArrow className="ms-3" color="#CBACF9" />

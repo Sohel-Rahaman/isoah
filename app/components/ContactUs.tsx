@@ -27,13 +27,13 @@ const ContactUs: React.FC = () => {
           <div className="relative group">
             <a
               href="tel:+1234567890"
-              className="flex items-center justify-center w-12 h-12 bg-green-500 text-white rounded-full shadow-lg hover:bg-green-600 transition duration-200"
+              className="flex items-center justify-center w-12 h-12 bg-green-500 text-[#ddd] rounded-full shadow-lg hover:bg-green-600 transition duration-200"
               aria-label="Call Us"
             >
               <FaPhoneAlt size={20} />
             </a>
             {/* Tooltip */}
-            <span className="absolute w-14 right-14 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
+            <span className="absolute w-14 right-14 top-1/2 transform -translate-y-1/2 bg-gray-800 text-[#ddd] text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
               Call Us
             </span>
           </div>
@@ -44,13 +44,13 @@ const ContactUs: React.FC = () => {
               href="https://wa.me/+1234567890"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center w-12 h-12 bg-green-400 text-white rounded-full shadow-lg hover:bg-green-500 transition duration-200"
+              className="flex items-center justify-center w-12 h-12 bg-green-400 text-[#ddd] rounded-full shadow-lg hover:bg-green-500 transition duration-200"
               aria-label="WhatsApp"
             >
               <FaWhatsapp size={24} />
             </a>
             {/* Tooltip */}
-            <span className="absolute right-14 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
+            <span className="absolute right-14 top-1/2 transform -translate-y-1/2 bg-gray-800 text-[#ddd] text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
               WhatsApp
             </span>
           </div>
@@ -60,7 +60,7 @@ const ContactUs: React.FC = () => {
       {/* Toggle Button */}
       <button
         onClick={() => setIsExpanded((prev) => !prev)}
-        className={`flex items-center text-white justify-center w-12 h-12 rounded-full shadow-lg bg-blue-500 hover:bg-blue-600 transition-all duration-700 transform ${
+        className={`flex items-center text-[#ddd] justify-center w-12 h-12 rounded-full shadow-lg bg-blue-500 hover:bg-blue-600 transition-all duration-700 transform ${
           isExpanded ? "rotate-180" : "rotate-0"
         }`}
         aria-label={isExpanded ? "Hide" : "Contact us"}

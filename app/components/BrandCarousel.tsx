@@ -128,7 +128,7 @@ const BrandCarousel: React.FC = () => {
         >
           <button
             onClick={closeLightbox}
-            className="absolute top-4 right-4 text-white text-3xl font-bold focus:outline-none z-10"
+            className="absolute top-4 right-4 text-[#ddd] text-3xl font-bold focus:outline-none z-10"
             aria-label="Close"
           >
             &times;

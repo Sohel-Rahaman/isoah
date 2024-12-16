@@ -85,7 +85,7 @@ const ParallaxSlider: React.FC<ParallaxSliderProps> = ({ slides }) => {
                         </motion.div>
 
                         {/* Text Content */}
-                        <div className="absolute inset-0 test text-center text-white p-4 z-20">
+                        <div className="absolute inset-0 test text-center text-[#ddd] p-4 z-20">
                             <div className='max-w-7xl absolute inset-0 mx-auto flex px-4 flex-col items-start justify-center'>
                                 <motion.div
                                     initial="hidden"
@@ -115,7 +115,7 @@ const ParallaxSlider: React.FC<ParallaxSliderProps> = ({ slides }) => {
                                     <button className="px-3 md:px-6 py-2 md:py-3 bg-white text-black font-bold rounded-md hover:bg-gray-200 transition">
                                         Start Training
                                     </button>
-                                    <button className="px-3 md:px-6 py-2 md:py-3 bg-transparent border border-white font-bold text-white rounded-md hover:bg-white hover:text-black transition">
+                                    <button className="px-3 md:px-6 py-2 md:py-3 bg-transparent border border-white font-bold text-[#ddd] rounded-md hover:bg-white hover:text-black transition">
                                         Buy My Voucher
                                     </button>
                                 </motion.div>

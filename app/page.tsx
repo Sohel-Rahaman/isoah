@@ -55,7 +55,7 @@ const HomePage = () => {
         <Timeline />
         <section className="overflow-hidden">
           <div className="w-full  max-w-7xl mx-auto px-4 md:px-6 py-24">
-            <h2 className="text-4xl font-bold mb-10 text-white text-center">
+            <h2 className="text-4xl font-bold mb-10 text-[#ddd] text-center">
               Our Students Feedback
             </h2>
             <div className="flex justify-center">
