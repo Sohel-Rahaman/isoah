@@ -97,22 +97,30 @@ const Navbar = () => {
                 className="flex items-center text-xl font-bold text-[#ddd]"
                 onClick={closeMenu}
               >
-                <Image   width={500}
-  height={500}src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[25px] md:text-[30px] '>ForensicsHQ</div>
+                <Image width={500}
+                  height={500} src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[25px] md:text-[30px] '>ForensicsHQ</div>
               </Link>
             </Animated>
           </div>
 
           {/* Desktop Navigation Menu */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ho-effect">
             <Animated direction="left" duration={0.6} delay={0}>
-              <Link href="/" className="text-[#ddd] hover:text-[#ddd]">
-                Home
+              <Link
+                href="/"
+                className="navbar-hover-effect text-[#ddd] hover:text-[#ddd]"
+                data-replace="Home"
+              >
+                <span>Home</span>
               </Link>
             </Animated>
             <Animated direction="top" duration={0.6} delay={0}>
-              <Link href="/about" className="text-[#ddd] hover:text-[#ddd]">
-                About
+              <Link
+                href="/about"
+                className="navbar-hover-effect text-[#ddd] hover:text-[#ddd]"
+                data-replace="About"
+              >
+                <span>About</span>
               </Link>
             </Animated>
             {/* Dropdown Menu for Services */}
@@ -120,18 +128,19 @@ const Navbar = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-[#ddd] bg-transparent hover:bg-white hover:text-black">
+                    <NavigationMenuTrigger className="text-[#ddd]  bg-transparent hover:bg-white hover:text-black">
                       Services
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid gap-3 p-4 md:w-80 lg:w-64">
+                      <ul className="grid gap-3 p-4 md:w-80 lg:w-64 ho-effect-loop">
                         <li>
                           <NavigationMenuLink asChild>
                             <Link
                               href="/services/web-development"
-                              className="block p-2 rounded-md hover:bg-gray-100"
+                              className="navbar-hover-effect block p-2 rounded-md hover:bg-gray-100"
+                              data-replace="Web Development"
                             >
-                              Web Development
+                              <span>Web Development</span>
                             </Link>
                           </NavigationMenuLink>
                         </li>
@@ -139,9 +148,10 @@ const Navbar = () => {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/services/mobile-development"
-                              className="block p-2 rounded-md hover:bg-gray-100"
+                              className="navbar-hover-effect block p-2 rounded-md hover:bg-gray-100"
+                              data-replace="Mobile Development"
                             >
-                              Mobile Development
+                              <span>Mobile Development</span>
                             </Link>
                           </NavigationMenuLink>
                         </li>
@@ -149,9 +159,10 @@ const Navbar = () => {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/services/seo"
-                              className="block p-2 rounded-md hover:bg-gray-100"
+                              className="navbar-hover-effect block p-2 rounded-md hover:bg-gray-100"
+                              data-replace="SEO Optimization"
                             >
-                              SEO Optimization
+                              <span>SEO Optimization</span>
                             </Link>
                           </NavigationMenuLink>
                         </li>
@@ -159,9 +170,10 @@ const Navbar = () => {
                           <NavigationMenuLink asChild>
                             <Link
                               href="/services/ui-ux-design"
-                              className="block p-2 rounded-md hover:bg-gray-100"
+                              className="navbar-hover-effect block p-2 rounded-md hover:bg-gray-100"
+                              data-replace="UI/UX Design"
                             >
-                              UI/UX Design
+                              <span>UI/UX Design</span>
                             </Link>
                           </NavigationMenuLink>
                         </li>
@@ -174,8 +186,12 @@ const Navbar = () => {
               </NavigationMenu>
             </Animated>
             <Animated direction="right" duration={0.6} delay={0}>
-              <Link href="/contact" className="text-[#ddd] hover:text-[#ddd]">
-                Contact
+              <Link
+                href="/contact"
+                className="navbar-hover-effect text-[#ddd] hover:text-[#ddd]"
+                data-replace="Contact"
+              >
+                <span>Contact</span>
               </Link>
             </Animated>
           </div>
@@ -234,15 +250,15 @@ const Navbar = () => {
           } transition-transform duration-300 ease-in-out w-64`}
         id="mobile-menu"
       >
-        <div  className="h-[90%] w-64 bg-black-100 text-[#ddd] rounded-r-2xl shadow-[0_4px_10px_#fefefe]">
+        <div className="h-[90%] w-64 bg-black-100 text-[#ddd] rounded-r-2xl shadow-[0_4px_10px_#fefefe]">
           <div className="flex items-center justify-between px-4 py-4 border-b">
             <Link
               href="/"
               className="flex items-center text-xl font-bold text-[#ddd]"
               onClick={closeMenu}
             >
-                <Image   width={500}
-  height={500}src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[20px] md:text-[30px] '>ForensicsHQ</div>
+              <Image width={500}
+                height={500} src="/f.webp" className='h-10 w-10 me-3' alt="" /> <div className='text-[20px] md:text-[30px] '>ForensicsHQ</div>
 
             </Link>
             <button
