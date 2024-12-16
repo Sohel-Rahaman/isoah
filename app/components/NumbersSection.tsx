@@ -1,4 +1,3 @@
- 
 'use client';
 
 import React, { useEffect } from 'react';
@@ -42,7 +41,7 @@ const NumbersSection: React.FC = () => {
           </div>
 
           {/* Right Section */}
-          <div className="flex flex-wrap justify-center md:justify-start gap-12">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full">
             {data.map((item, index) => (
               <CountUpCard key={index} item={item} />
             ))}
@@ -115,7 +114,7 @@ const CountUpAnimated: React.FC<CountUpAnimatedProps> = ({ end, suffix, start })
     if (!start) return; // Do not start counting if not triggered
 
     let startCount = 0;
-    const duration = 5000; // Total duration of the count-up in ms
+    const duration = 2000; // Total duration of the count-up in ms
     const incrementTime = 50; // Interval time in ms
     const step = end / (duration / incrementTime);
 
