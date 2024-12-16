@@ -128,7 +128,7 @@ const Navbar = () => {
               <NavigationMenu>
                 <NavigationMenuList>
                   <NavigationMenuItem>
-                    <NavigationMenuTrigger className="text-[#ddd]  bg-transparent hover:bg-white hover:text-black">
+                    <NavigationMenuTrigger className="text-[#ddd] font-bold bg-transparent hover:bg-white hover:text-black">
                       Services
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>

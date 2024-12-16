@@ -88,7 +88,7 @@ const CountUpCard: React.FC<CountUpCardProps> = ({ item }) => {
       transition={{ duration: 1, ease: 'easeOut' }}
     >
       <motion.h3
-        className="text-5xl font-extrabold text-[#ddd] mb-2"
+        className="text-5xl font-extrabold text-[#fff] mb-2"
         initial={{ opacity: 0, y: 50 }}
         animate={controls}
         variants={numberVariants}

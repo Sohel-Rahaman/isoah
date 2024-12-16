@@ -44,7 +44,7 @@ const ParallaxSlider: React.FC<ParallaxSliderProps> = ({ slides }) => {
     };
 
     return (
-        <div className="relative w-full h-[60vh] sm:h-[40vh] md:h-[60vh] xl:h-screen overflow-hidden  bck">
+        <div className="relative w-full h-[60vh] sm:h-[40vh] md:h-[60vh] xl:h-[85vh] overflow-hidden  bck">
             <div>
                 <Spotlight
                     className="-top-40 -left-10 md:-left-[27rem] md:-top-20 h-[60vh] sm:h-[40vh] md:h-[60vh] xl:[95vh]"

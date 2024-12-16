@@ -89,7 +89,7 @@ export const Footer: React.FC = () => {
                   />
 
                   <button
-                    className="mt-1 w-full bg-blue-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-[#ddd] transition-none hover:bg-blue-600 sm:mt-0 sm:w-auto sm:shrink-0"
+                    className="mt-1 rounded-md w-full bg-blue-600 px-6 py-3 text-sm font-bold uppercase tracking-wide text-[#ddd] transition-none hover:bg-blue-600 sm:mt-0 sm:w-auto sm:shrink-0"
                   >
                     Sign Up
                   </button>
